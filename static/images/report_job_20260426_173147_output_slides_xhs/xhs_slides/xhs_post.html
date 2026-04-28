@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>2026港迪逆时针爆刷法！🔥</title>
+<style>
+  :root {
+    --xhs-red: #ff2442;
+    --xhs-bg: #fafafa;
+    --xhs-card: #ffffff;
+    --xhs-text: #333333;
+    --xhs-sub: #999999;
+    --xhs-tag: #f0f0f0;
+    --radius: 12px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { font-size: 16px; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", "Microsoft YaHei", sans-serif;
+    background: var(--xhs-bg);
+    color: var(--xhs-text);
+    max-width: 480px;
+    margin: 0 auto;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ---- Carousel ---- */
+  .carousel-wrap {
+    position: relative;
+    width: 100%;
+    background: #000;
+    overflow: hidden;
+  }
+  .carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .carousel::-webkit-scrollbar { display: none; }
+  .slide {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+
+  /* ---- Counter ---- */
+  .counter {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: rgba(0,0,0,.55);
+    color: #fff;
+    font-size: 12px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    pointer-events: none;
+    z-index: 5;
+  }
+
+  /* ---- Dots ---- */
+  .dots {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px 0 6px;
+    background: var(--xhs-card);
+  }
+  .dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: #ddd;
+    transition: all .3s;
+    cursor: pointer;
+  }
+  .dot.active {
+    background: var(--xhs-red);
+    width: 18px;
+    border-radius: 3px;
+  }
+
+  /* ---- Arrows ---- */
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px; height: 36px;
+    background: rgba(255,255,255,.75);
+    border: none;
+    border-radius: 50%;
+    font-size: 18px;
+    color: #333;
+    cursor: pointer;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity .2s;
+  }
+  .carousel-wrap:hover .arrow { opacity: 1; }
+  .arrow-left { left: 10px; }
+  .arrow-right { right: 10px; }
+
+  /* ---- Content card ---- */
+  .content {
+    background: var(--xhs-card);
+    padding: 16px 18px 24px;
+  }
+  .main-title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 12px;
+    color: var(--xhs-text);
+  }
+  .body p {
+    font-size: 15px;
+    line-height: 1.75;
+    margin-bottom: 10px;
+    color: #444;
+  }
+  .tags {
+    margin-top: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 13px;
+    color: #4a90d9;
+    background: var(--xhs-tag);
+    padding: 4px 12px;
+    border-radius: 20px;
+  }
+
+  /* ---- Alt titles ---- */
+  .alt-titles {
+    padding: 16px 18px;
+    background: var(--xhs-card);
+    margin-top: 8px;
+    border-radius: var(--radius);
+  }
+  .alt-titles-label {
+    font-size: 13px;
+    color: var(--xhs-sub);
+    margin-bottom: 8px;
+  }
+  .alt-title {
+    font-size: 14px;
+    color: #555;
+    padding: 6px 0;
+    border-bottom: 1px solid #f5f5f5;
+  }
+  .alt-title:last-child { border-bottom: none; }
+
+  /* ---- Footer ---- */
+  .footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+    color: var(--xhs-sub);
+  }
+</style>
+</head>
+<body>
+
+  <div class="carousel-wrap">
+    <div class="counter"><span id="cur">1</span>/10</div>
+    <button class="arrow arrow-left" onclick="go(-1)">‹</button>
+    <button class="arrow arrow-right" onclick="go(1)">›</button>
+    <div class="carousel" id="carousel">
+          <div class="slide"><img src="slide_01.png" alt="slide 1"></div>
+          <div class="slide"><img src="slide_02.png" alt="slide 2"></div>
+          <div class="slide"><img src="slide_03.png" alt="slide 3"></div>
+          <div class="slide"><img src="slide_04.png" alt="slide 4"></div>
+          <div class="slide"><img src="slide_05.png" alt="slide 5"></div>
+          <div class="slide"><img src="slide_06.png" alt="slide 6"></div>
+          <div class="slide"><img src="slide_07.png" alt="slide 7"></div>
+          <div class="slide"><img src="slide_08.png" alt="slide 8"></div>
+          <div class="slide"><img src="slide_09.png" alt="slide 9"></div>
+          <div class="slide"><img src="slide_10.png" alt="slide 10"></div>
+    </div>
+  </div>
+
+  <div class="dots" id="dots">
+          <span class="dot active" data-idx="0"></span>
+          <span class="dot" data-idx="1"></span>
+          <span class="dot" data-idx="2"></span>
+          <span class="dot" data-idx="3"></span>
+          <span class="dot" data-idx="4"></span>
+          <span class="dot" data-idx="5"></span>
+          <span class="dot" data-idx="6"></span>
+          <span class="dot" data-idx="7"></span>
+          <span class="dot" data-idx="8"></span>
+          <span class="dot" data-idx="9"></span>
+  </div>
+
+  <div class="content">
+    <div class="main-title">2026港迪逆时针爆刷法！🔥</div>
+    <div class="body">
+        <p>姐妹们！！2026年3月去香港迪士尼的都给我锁死这篇！💥我花了200小时+实地踩点+物理称重实验，终于搞出一套「逆时针爆刷+盲盒必中」王炸组合技！不踩雷、不排队、不踩坑，一天刷15个项目+精准拿下小飞象&amp;蜂蜜罐盲盒，你敢信？！🤯</p>
+        <p>📍【逆时针动线避坑指南】</p>
+        <p>别再傻傻顺时针排队了！2026年3月“星战极速穿梭”和“迪士尼铁路”都在修！🚫所以从“明日世界”开刷才是王道～</p>
+        <p>👉清晨提前入园→直冲“魔雪奇缘世界”通关双项目（雪岭滑雪橇+魔雪奇幻之旅）❄️</p>
+        <p>👉接着逆时针冲“铁甲奇侠”+“蚁侠黄蜂女”→拐进“幻想世界”刷小熊维尼🍯</p>
+        <p>👉后半程“反斗奇兵”→“迷离庄园”→“灰熊山谷”→“探险世界”→最后美国大街血拼🛍️</p>
+        <p>⚠️排队超60分钟？立刻用App切项目+预约“森林小天地”卡，节奏拿捏得死死的！</p>
+        <p>🎁【盲盒必中“盒法”大公开】</p>
+        <p>别再靠运气摇盲盒了！我用电子秤+重心法实测100%命中率！</p>
+        <p>🐘小飞象款：克数130g+！摇起来侧边有阻力，耳朵卡盒壁，晃不动！</p>
+        <p>🍯蜂蜜罐款：重心超低！垂直摇基本不动，声音沉闷像敲木头～</p>
+        <p>📍买盲盒认准“滴答精品店”或“美国大街旗舰店”，批次新+防伪码可比对，误差归零！</p>
+        <p>📅【黄金避峰时间表】</p>
+        <p>3月1日-19日！周二到周四！人最少！错峰王炸！💥</p>
+        <p>3月20日起达菲春日活动回归！人潮爆炸！达菲粉请自备小板凳排队！🚫</p>
+        <p>⚠️如果非得3月20日后去，记得提前买票拿限定拼图+餐饮折扣，省点是一点！</p>
+        <p>姐妹们，这套方案我亲测有效！2026年3月冲港迪的，赶紧收藏+转发给你的闺蜜团！别等爆满才后悔！💪</p>
+        <p>#香港迪士尼攻略 #2026港迪必看 #盲盒必中技巧 #逆时针爆刷法 #避峰出行指南</p>
+    </div>
+    <div class="tags">
+      <span class="tag">#香港迪士尼攻略</span> <span class="tag">#2026港迪必看</span> <span class="tag">#盲盒必中技巧</span> <span class="tag">#逆时针爆刷法</span> <span class="tag">#避峰出行指南</span>
+    </div>
+  </div>
+
+  <div class="alt-titles">
+    <div class="alt-titles-label">📌 备选标题</div>
+            <div class="alt-title">2026港迪逆时针爆刷法！🔥</div>
+            <div class="alt-title">盲盒必中神技曝光！🎯</div>
+            <div class="alt-title">3月去港迪的都给我看！</div>
+            <div class="alt-title">避开人潮的隐藏动线！🤫</div>
+            <div class="alt-title">达菲粉慎入！避峰指南⚠️</div>
+  </div>
+
+  <div class="footer">Generated by PosterGen × Paper2Slides</div>
+
+<script>
+(function() {
+  const carousel = document.getElementById('carousel');
+  const dots = document.querySelectorAll('.dot');
+  const counter = document.getElementById('cur');
+  const total = 10;
+  let idx = 0;
+
+  function update(i) {
+    idx = Math.max(0, Math.min(i, total - 1));
+    carousel.children[idx].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+    dots.forEach((d, j) => d.classList.toggle('active', j === idx));
+    counter.textContent = idx + 1;
+  }
+
+  carousel.addEventListener('scroll', function() {
+    const w = carousel.offsetWidth;
+    const newIdx = Math.round(carousel.scrollLeft / w);
+    if (newIdx !== idx && newIdx >= 0 && newIdx < total) {
+      idx = newIdx;
+      dots.forEach((d, j) => d.classList.toggle('active', j === idx));
+      counter.textContent = idx + 1;
+    }
+  });
+
+  dots.forEach(d => d.addEventListener('click', function() {
+    update(parseInt(this.dataset.idx));
+  }));
+
+  window.go = function(dir) { update(idx + dir); };
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'ArrowLeft') update(idx - 1);
+    if (e.key === 'ArrowRight') update(idx + 1);
+  });
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>2026春日达菲攻略🔥</title>
+<style>
+  :root {
+    --xhs-red: #ff2442;
+    --xhs-bg: #fafafa;
+    --xhs-card: #ffffff;
+    --xhs-text: #333333;
+    --xhs-sub: #999999;
+    --xhs-tag: #f0f0f0;
+    --radius: 12px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { font-size: 16px; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", "Microsoft YaHei", sans-serif;
+    background: var(--xhs-bg);
+    color: var(--xhs-text);
+    max-width: 480px;
+    margin: 0 auto;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ---- Carousel ---- */
+  .carousel-wrap {
+    position: relative;
+    width: 100%;
+    background: #000;
+    overflow: hidden;
+  }
+  .carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .carousel::-webkit-scrollbar { display: none; }
+  .slide {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+
+  /* ---- Counter ---- */
+  .counter {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: rgba(0,0,0,.55);
+    color: #fff;
+    font-size: 12px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    pointer-events: none;
+    z-index: 5;
+  }
+
+  /* ---- Dots ---- */
+  .dots {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px 0 6px;
+    background: var(--xhs-card);
+  }
+  .dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: #ddd;
+    transition: all .3s;
+    cursor: pointer;
+  }
+  .dot.active {
+    background: var(--xhs-red);
+    width: 18px;
+    border-radius: 3px;
+  }
+
+  /* ---- Arrows ---- */
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px; height: 36px;
+    background: rgba(255,255,255,.75);
+    border: none;
+    border-radius: 50%;
+    font-size: 18px;
+    color: #333;
+    cursor: pointer;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity .2s;
+  }
+  .carousel-wrap:hover .arrow { opacity: 1; }
+  .arrow-left { left: 10px; }
+  .arrow-right { right: 10px; }
+
+  /* ---- Content card ---- */
+  .content {
+    background: var(--xhs-card);
+    padding: 16px 18px 24px;
+  }
+  .main-title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 12px;
+    color: var(--xhs-text);
+  }
+  .body p {
+    font-size: 15px;
+    line-height: 1.75;
+    margin-bottom: 10px;
+    color: #444;
+  }
+  .tags {
+    margin-top: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 13px;
+    color: #4a90d9;
+    background: var(--xhs-tag);
+    padding: 4px 12px;
+    border-radius: 20px;
+  }
+
+  /* ---- Alt titles ---- */
+  .alt-titles {
+    padding: 16px 18px;
+    background: var(--xhs-card);
+    margin-top: 8px;
+    border-radius: var(--radius);
+  }
+  .alt-titles-label {
+    font-size: 13px;
+    color: var(--xhs-sub);
+    margin-bottom: 8px;
+  }
+  .alt-title {
+    font-size: 14px;
+    color: #555;
+    padding: 6px 0;
+    border-bottom: 1px solid #f5f5f5;
+  }
+  .alt-title:last-child { border-bottom: none; }
+
+  /* ---- Footer ---- */
+  .footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+    color: var(--xhs-sub);
+  }
+</style>
+</head>
+<body>
+
+  <div class="carousel-wrap">
+    <div class="counter"><span id="cur">1</span>/5</div>
+    <button class="arrow arrow-left" onclick="go(-1)">‹</button>
+    <button class="arrow arrow-right" onclick="go(1)">›</button>
+    <div class="carousel" id="carousel">
+          <div class="slide"><img src="slide_01.png" alt="slide 1"></div>
+          <div class="slide"><img src="slide_03.png" alt="slide 2"></div>
+          <div class="slide"><img src="slide_04.png" alt="slide 3"></div>
+          <div class="slide"><img src="slide_05.png" alt="slide 4"></div>
+          <div class="slide"><img src="slide_06.png" alt="slide 5"></div>
+    </div>
+  </div>
+
+  <div class="dots" id="dots">
+          <span class="dot active" data-idx="0"></span>
+          <span class="dot" data-idx="1"></span>
+          <span class="dot" data-idx="2"></span>
+          <span class="dot" data-idx="3"></span>
+          <span class="dot" data-idx="4"></span>
+  </div>
+
+  <div class="content">
+    <div class="main-title">2026春日达菲攻略🔥</div>
+    <div class="body">
+        <p>姐妹们！！2026年3月香港迪士尼「达菲与好友」春日庆典的攻略我给你们肝出来了！！不看这篇你真的会哭着出园…😭</p>
+        <p>首先！别一进门就冲美国小镇大街！错！大错特错！🙅‍♀️ 正确姿势是：直奔明日世界！逆时针绕园！这样能完美避开早高峰人潮，把热门项目比如「魔雪奇缘世界」和「迷离庄园」全刷完～等别人排到腿软，你已经在灰熊山谷拍完美照喝奶茶了🥤</p>
+        <p>重点来了！！调研礼品不是玄学！是攻略！🎯 园内会有人举平板找你做问卷，答对几个冷知识就能换限定周边！比如：米奇是1928年出生的，朱迪有275个兄弟姐妹～提前背熟，换挂饰/公仔手到擒来！兑换点在「广场时尚店」或「安仔玩具箱」，记得带门票二维码！</p>
+        <p>2026年主题是「水手达菲」！全员穿水手服！萌到犯规！🌊 从3月20日开到6月7日，香港居民还有75折门票+餐饮券！冲就对了！生日/首访记得去「市镇会堂」领徽章，仪式感拉满！</p>
+        <p>最后小贴士：傍晚回美国小镇大街拍照光线绝美！还能顺便看夜间表演+买限定周边～完美闭环！✨</p>
+        <p>#香港迪士尼 #达菲与好友 #春日庆典 #避人流攻略 #调研礼品</p>
+    </div>
+    <div class="tags">
+      <span class="tag">#香港迪士尼</span> <span class="tag">#达菲与好友</span> <span class="tag">#春日庆典</span> <span class="tag">#避人流攻略</span> <span class="tag">#调研礼品</span>
+    </div>
+  </div>
+
+  <div class="alt-titles">
+    <div class="alt-titles-label">📌 备选标题</div>
+            <div class="alt-title">2026春日达菲攻略🔥</div>
+            <div class="alt-title">逆时针玩转港迪💥</div>
+            <div class="alt-title">调研礼品白拿秘籍🎁</div>
+            <div class="alt-title">水手达菲萌哭我😭</div>
+            <div class="alt-title">避人流神操作💯</div>
+  </div>
+
+  <div class="footer">Generated by PosterGen × Paper2Slides</div>
+
+<script>
+(function() {
+  const carousel = document.getElementById('carousel');
+  const dots = document.querySelectorAll('.dot');
+  const counter = document.getElementById('cur');
+  const total = 5;
+  let idx = 0;
+
+  function update(i) {
+    idx = Math.max(0, Math.min(i, total - 1));
+    carousel.children[idx].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+    dots.forEach((d, j) => d.classList.toggle('active', j === idx));
+    counter.textContent = idx + 1;
+  }
+
+  carousel.addEventListener('scroll', function() {
+    const w = carousel.offsetWidth;
+    const newIdx = Math.round(carousel.scrollLeft / w);
+    if (newIdx !== idx && newIdx >= 0 && newIdx < total) {
+      idx = newIdx;
+      dots.forEach((d, j) => d.classList.toggle('active', j === idx));
+      counter.textContent = idx + 1;
+    }
+  });
+
+  dots.forEach(d => d.addEventListener('click', function() {
+    update(parseInt(this.dataset.idx));
+  }));
+
+  window.go = function(dir) { update(idx + dir); };
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'ArrowLeft') update(idx - 1);
+    if (e.key === 'ArrowRight') update(idx + 1);
+  });
+})();
+</script>
+
+</body>
+</html>
