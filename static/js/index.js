@@ -90,6 +90,21 @@ window.addEventListener('scroll', function() {
     }
 });
 
+// Multimodal Renderer Gallery: query tabs
+function setupRendererGallery() {
+    const tabs = document.querySelectorAll('.renderer-tab');
+    const panels = document.querySelectorAll('.renderer-panel');
+    if (tabs.length === 0 || panels.length === 0) return;
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const target = tab.dataset.query;
+            tabs.forEach(t => t.classList.toggle('is-active', t.dataset.query === target));
+            panels.forEach(p => p.classList.toggle('is-active', p.dataset.query === target));
+        });
+    });
+}
+
 // Video carousel autoplay when in view
 function setupVideoCarouselAutoplay() {
     const carouselVideos = document.querySelectorAll('.results-carousel video');
@@ -138,5 +153,8 @@ $(document).ready(function() {
     
     // Setup video autoplay for carousel
     setupVideoCarouselAutoplay();
+
+    // Setup query tabs in the Multimodal Renderer Gallery
+    setupRendererGallery();
 
 })
